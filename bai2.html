@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script language="javascript">
+let nam = parseInt(prompt("Nhập vào một năm dương lịch:"));
+function kiemTraNamNhuan(nam) {
+  return (nam % 4 === 0 && nam % 100 !== 0) || (nam % 400 === 0);
+}
+if (kiemTraNamNhuan(nam)) {
+  console.log(nam + " là năm nhuận.");
+} else {
+  console.log(nam + " không phải là năm nhuận.");
+}
+    </script>
+  </body>
+</html>
