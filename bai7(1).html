@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 7 - Mảng đơn giản</title>
+</head>
+<body>
+  <h3>Nhập mảng (các số cách nhau bằng dấu phẩy):</h3>
+  <input type="text" id="arrInput" placeholder="Ví dụ: 5,2,9,4"><br><br>
+  <button onclick="xuLy()">Xử lý</button>
+  <p id="ketQua"></p>
+  <script>
+    function xuLy() {
+      let arr = document.getElementById("arrInput").value.split(',').map(Number);
+      let ketQua = '';
+      ketQua += 'a. Mảng: ' + arr + '<br>';
+      ketQua += 'b. Đảo ngược: ' + [...arr].reverse() + '<br>';
+      ketQua += 'c. Tăng dần: ' + [...arr].sort((a, b) => a - b) + '<br>';
+      ketQua += 'd. Tổng số chẵn: ' + arr.filter(x => x % 2 === 0).reduce((a, b) => a + b, 0) + '<br>';
+      let x = Number(prompt("e. Nhập số cần tìm:"));
+      let viTri = arr.map((val, i) => val === x ? i : -1).filter(i => i !== -1);
+      ketQua += viTri.length > 0 
+        ? `e. Có trong mảng ở vị trí: ${viTri}` 
+        : 'e. Không có trong mảng';
+      document.getElementById("ketQua").innerHTML = ketQua;
+    }
+  </script>
+</body>
+</html>
