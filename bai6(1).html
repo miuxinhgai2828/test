@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="vi">
+<body>
+  <script>
+let n = parseInt(prompt("Nhập một số nguyên dương để tính giai thừa:"));
+if (isNaN(n) || n < 0 || !Number.isInteger(n)) {
+  console.log("Vui lòng nhập một số nguyên dương hợp lệ!");
+} else {
+  let giaiThua = 1;
+  for (let i = 1; i <= n; i++) {
+    giaiThua *= i;
+  }
+  console.log(n + "! = " + giaiThua);
+}
+  </script>
+</body>
+</html>
