@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <script language="javascript">
+let diemTrungBinh = parseFloat(prompt("Nhập điểm trung bình của sinh viên:"));
+let xepLoai;
+if (diemTrungBinh >= 9 && diemTrungBinh <= 10) {
+  xepLoai = "Xuất sắc";
+} else if (diemTrungBinh >= 7 && diemTrungBinh < 9) {
+  xepLoai = "Khá";
+} else if (diemTrungBinh >= 5 && diemTrungBinh < 7) {
+  xepLoai = "Trung bình";
+} else if (diemTrungBinh >= 0 && diemTrungBinh < 5) {
+  xepLoai = "Yếu";
+} else {
+  xepLoai = "Điểm không hợp lệ!";
+}
+console.log("Xếp loại: " + xepLoai);
+    </script>
+  </body>
+</html>
